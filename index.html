@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!--이거 로그인 모달창-->
+    <div id="login-background">
+        <div id="login-modal">
+            <img id="modal-close" src="./assets/close_black_24dp.svg" alt="" onclick="closeModal()">
+            <div id="login-modal-top">
+                <span>로그인</span>
+            </div>
+            <div id="login-modal-bottom">
+                <input id="input-id" placeholder="아이디를 입력해주세요." type="text">
+                <div>
+                    <input id="input-password" placeholder="비밀번호를 입력해주세요." type="password" onkeydown="onLogin()">
+                    <img id="passshow" src="./assets/eye-solid.svg" alt="" onclick="toggleShow(0)">
+                    <img id="passhide" src="./assets/eye-slash-solid.svg" alt="" onclick="toggleShow(1)">
+                </div>
+                <span id="toregister" onclick="showReg()">계정을 잃어버리셨나요?</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="reg-background">
+        <div id="reg-modal">
+            <img id="reg-modal-close" src="./assets/close_black_24dp.svg" alt="" onclick="closeReg()">
+            <div id="reg-modal-top">
+                <span>회원가입</span>
+            </div>
+            <div id="reg-modal-bottom">
+                <input id="reg-input-id" placeholder="아이디를 입력해주세요." type="text">
+                <input id="reg-input-password" placeholder="비밀번호를 입력해주세요." type="password">
+                <button id="onregister" onclick="onReg()">회원가입</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="header-wrapper">
+        <div id="header">
+            <span id="tomain" onclick="toMain()">게시물 보기</span>
+            <span id="topost" onclick="writePost()">게시물 등록</span>
+            <button id="tologin" onclick="showModal()">로그인</button>
+            <img id="tomypage" onclick="myPage()" src="./assets/account_circle_black_24dp.svg" alt="">
+        </div>
+    </div>
+
+    <div id="html_wrapper_wrapper">
+        <div id="html_wrapper">
+            <span id="mypost">내가 작성한 게시물</span>
+            <div id="body">
+                <div id="list_wrapper">
+                    <div id="body-header">
+                        <div class="list-left-side">
+                            <span>NO</span>
+                        </div>
+                        <div id="body-header-right">
+                            <span>제목</span>
+                        </div>
+                    </div>
+                    <div id="show-list">
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div id="page-bar">
+                    <div id="prevpage" class="bar-side" onclick="movePage('prev')"><span><</span></div>        
+                    <div id="bar-mid">
+                        <div id="show-pagenum"></div>
+                    </div>
+                    <div id="nextpage" class="bar-side" onclick="movePage('next')"><span>></span></div>                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 이건 게시글 작성화면 -->
+    <div id="post-wrapper-wrapper"> 
+        <div id="post-wrapper">
+            <input type="text" placeholder="제목을 입력하세요."  id="post-title-input">
+            <textarea placeholder="내용을 입력하세요." name=""  id="post-content-input" cols="30" rows="10"></textarea>
+            <button id="post-button" onclick="configPost();">작성하기</button>
+        </div>
+    </div>
+
+
+    <!-- 이건 게시글 상세보기 -->
+    <div id="detail-wrapper-wrapper"> 
+        <div id="detail-wrapper">
+            <div id="detail-top">
+                <span id="detail-title">제목</span>
+                <span id="detail-writer">작성자</span>
+            </div>
+            <div id="detail-bottom">
+                <p id="detail-content">내용</p>
+            </div>
+            <button id="edit-button" onclick="showEdit();">수정하기</button>
+        </div>
+    </div>
+    
+    <!-- 이건 게시글 수정하기 -->
+    <div id="edit-wrapper-wrapper"> 
+        <div id="edit-wrapper">
+            <input type="text" placeholder="수정할 제목을 입력하세요."  id="edit-title-input">
+            <textarea placeholder="수정할 내용을 입력하세요." name=""  id="edit-content-input" cols="30" rows="10"></textarea>
+            <button id="config-edit-button" onclick="configEdit();">수정하기</button>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
