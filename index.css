@@ -1,0 +1,638 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#header{
+    width: 800px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    justify-content: flex-end;
+    z-index: 0;
+    font-weight: 400;
+}
+
+#header-wrapper{
+    width: 100%;
+    height: 67px;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+#html_wrapper_wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -2;
+    background-color: #FDFDFD;;
+}
+
+#html_wrapper{
+    height: calc(100vh - 172px);
+    margin-top: 160px;
+    width: 800px;
+   
+}
+
+#page-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    height:20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#prevpage{
+    
+    justify-self: flex-start;
+    text-align: center;
+    margin-right: 15px;
+}
+#bar-mid{
+    height:30px;
+    display: flex;
+    flex-direction: row;
+}
+#nextpage{
+    
+    justify-self: flex-end;
+    text-align: center;
+    margin-left: 15px;
+    
+}
+
+.bar-side{
+    width: 20px;;
+    height: 20px;
+    padding: none;
+    font-weight: bold;
+    font-size: 20px;
+    
+    margin-bottom: 10px;
+    
+}
+
+.bar-side span{
+    height: 10px;;
+    cursor: pointer;
+}
+
+
+.pagenum{
+    
+    width:20px;
+    height:20px;
+    margin-top: 3px;
+    margin-right: 14.5px;
+    margin-left: 14.5px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.lists{
+
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 14px;
+    font-weight: 400;
+    list-style: none;
+    color: #5F5F5F;
+}
+
+.lists li{
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.list-left-side{
+    height: 100%;
+    border-right: 1px solid #CCCCCC;
+ 
+    width: 119.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#body-header{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#body-header-right{
+    width: 685.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#body-header .list-left-side{
+    border-right: none;
+    border-bottom: none;
+    
+}
+
+#mypost{
+    
+    height: 23px;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    top:117px;
+    display: none;
+}
+
+#tologin{
+    border: none;
+    width: 70px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: #386BEE;
+    color: white;
+    font-size: 11px;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+}
+
+#topost{
+    margin-right: 105px;
+    cursor: pointer;
+}
+
+#tomain{
+    margin-right: 22px;
+    cursor: pointer;
+}
+
+#tomypage{
+    display: none;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    margin-right: 22px;
+    cursor: pointer;
+}
+
+/* 로그인 */
+#login-background{
+    display: none;
+    border: 1px solid black;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(54, 51, 51, 0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    
+}
+
+#login-modal{
+
+    width: 490px;
+    height: 538px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal-close{
+
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 5px;
+}
+
+#login-modal-top{
+    border-bottom: 1px solid #9A9191;
+    width: 400px;
+    height: 165px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+   
+}
+
+#login-modal-bottom{
+    width: 100%;
+    height: 373px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#login-modal-bottom input{
+    width: 225px;
+    height: 43px;
+    border: 1px solid black;
+    border-radius: 0px;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+#login-modal-bottom span{
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 130px;
+    color: #5F5F5F;
+    font-weight: 400;
+}
+
+#login-modal-bottom div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#login-modal-bottom div img{
+    width: 20px;
+    height: 16px;
+    position: absolute;
+    margin-left: 245px;
+}
+
+#passshow{
+    display: none;
+}
+
+#passhide{
+
+}
+
+#input-id{
+    margin-top: 105px;
+}
+
+#input-password{
+    
+}
+
+/*회원가입*/
+#reg-background{
+    display: flex;
+    border: 1px solid black;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(54, 51, 51, 0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    
+}
+
+#reg-modal{
+
+    width: 490px;
+    height: 538px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#reg-modal-close{
+
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 5px;
+}
+
+#reg-modal-top{
+    border-bottom: 1px solid #9A9191;
+    width: 400px;
+    height: 78px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+   
+}
+
+#reg-modal-bottom{
+    width: 100%;
+    height: 373px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#reg-modal-bottom input{
+    width: 225px;
+    height: 43px;
+    border: 1px solid black;
+    border-radius: 0px;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+#reg-modal-bottom span{
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 130px;
+    color: #5F5F5F;
+    font-weight: 400;
+}
+
+#reg-modal-bottom div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#reg-modal-bottom div img{
+    width: 20px;
+    height: 16px;
+    position: absolute;
+    margin-left: 245px;
+}
+
+#reg-input-id{
+    margin-top: 105px;
+}
+
+#reg-input-password{
+    margin-top: 22px;
+}
+
+#onregister{
+    background-color: black;
+    color: white;
+    border-radius: 0px;
+    border: none;
+    margin-top: 60px;
+    width: 200px;
+    height: 36px;
+}
+
+#toregister{
+    cursor: pointer;
+}
+
+
+/* 포스트 */
+
+#post-wrapper-wrapper{
+    width: 100%;
+    height: calc(100vh - 67px);
+    margin-top: 67px;
+    background-color: #FDFDFD;
+    position: absolute;
+    z-index:-2;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#post-wrapper{
+
+    width: 800px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#post-title-input{
+    width: calc(100% - 30px);
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    border-radius: 0px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    margin-top: 105px;
+
+
+    color: #5F5F5F;
+}
+
+#post-content-input{
+    width: calc(100% - 30px);
+    height: 430px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 12px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    color: #5F5F5F;
+    resize: none;
+}
+
+#post-button{
+    width: 100px;
+    height: 40px;
+    background: #EDEDED;
+    border-radius: 20px;
+    border: none;
+    margin-left: 700px;
+    margin-top: 16px;
+}
+
+
+
+
+
+
+#detail-wrapper-wrapper{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 67px);
+    margin-top: 67px;
+    background-color: #FDFDFD;
+    z-index: -2;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#detail-wrapper{
+
+    width: 800px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#detail-top{
+    border-top: 1px solid black;
+    border-bottom: 1px solid #CCCCCC;
+    margin-top: 105px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#detail-bottom{
+    border-bottom: 1px solid black;
+    height: 413px;
+    padding-top: 37px;
+
+}
+
+#detail-writer{
+    margin-right: 23px;
+}
+
+#detail-title{
+    margin-left: 20px;
+}
+
+#detail-content{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#edit-button{
+    display: none;
+    margin-top: 13px;
+    width: 100px;
+    height: 40px;
+    margin-left: 700px;
+    border-radius: 20px;
+    background-color: #EDEDED;
+    border: none;
+    color: #5F5F5F;
+    font-weight: 400;
+    transition: 0.3s;
+    
+}
+
+#edit-button:hover{
+    transition: 0.3s;
+    background-color: #386BEE;
+    color: white;
+}
+
+
+
+
+#edit-wrapper-wrapper{
+    width: 100%;
+    height: calc(100vh - 67px);
+    margin-top: 67px;
+    background-color: #FDFDFD;
+    position: absolute;
+    z-index:-2;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#edit-wrapper{
+
+    width: 800px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#edit-title-input{
+    width: calc(100% - 30px);
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    border-radius: 0px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    margin-top: 105px;
+
+
+    color: #5F5F5F;
+}
+
+#edit-content-input{
+    width: calc(100% - 30px);
+    height: 430px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 12px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    color: #5F5F5F;
+    resize: none;
+}
+
+#config-edit-button{
+    width: 100px;
+    height: 40px;
+    background-color: #386BEE;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    margin-left: 700px;
+    margin-top: 16px;
+}
+
+
+
